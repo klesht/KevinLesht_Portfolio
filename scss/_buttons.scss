@@ -1,0 +1,35 @@
+.button {
+	display: block;
+	background: none;
+	padding: 0 2em;
+	border: 0;
+	border-radius: 6px;
+	box-shadow: inset 0 0 0 2px $lightGray;
+	white-space: nowrap;
+	font-size: em(16);
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: $Gray;
+	cursor: pointer;
+	&:hover, &:focus {
+		color: #fff;
+		background: $lightGray;
+	}
+	&:active {
+		background: $Gray;
+		box-shadow: inset 0 0 0 2px $Gray;
+	}
+}
+
+.button--large {
+	height: 75px;
+	line-height: 75px;
+}
+
+.button--small {
+	height: 55px;
+	line-height: 55px;
+}

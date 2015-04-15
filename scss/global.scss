@@ -1,9 +1,27 @@
 @import "bourbon/bourbon";
 @import "_normalize.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
 @import "_layout.scss";
+@import "_buttons.scss";
 @import "_header.scss";
 @import "_splash.scss";
+@import "_projects.scss";
 
 * {
 	@include box-sizing(border-box);
+}
+
+img, video {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+.section-heading {
+	margin: 0;
+	padding: 2em 0;	
+	font-size: em(32);
+	text-transform: uppercase;
+	text-align: center;
 }
