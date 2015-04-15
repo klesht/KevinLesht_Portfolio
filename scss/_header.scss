@@ -1,0 +1,60 @@
+.top-navigation {
+	position:fixed;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	width: 100%;
+	height: em(100);
+	background: transparent;
+	@include transition(all 0.3s ease);
+
+	nav {
+		line-height: em(100);
+		@include transition(all 0.3s ease);
+
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+
+		.go-home {
+			float: left;
+		}
+
+		ul {
+			float: right;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				margin-left: 4em;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:nth-child(n+4) {
+					margin-left: 2em;
+				}
+			}
+		}
+	}
+
+	&.shrink {
+		height: em(80);
+		background: #fff;
+		opacity: 0.97;
+		border-bottom: 1px solid #000;
+		-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+		box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+
+		nav {
+			line-height: em(80);
+
+			a {
+				color: #2c2c2c;
+			}
+		}
+	} 
+}
