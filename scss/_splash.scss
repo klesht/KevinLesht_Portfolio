@@ -1,0 +1,43 @@
+.splash {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: em(650);
+	text-align:center;
+
+	.page-intro {
+		position: relative;
+		padding-top: em(220);
+		// z-index: 3;
+		
+		h1 {
+			margin: 40px;
+			font-size: 5em;
+			line-height: 80px;
+			color: #000;
+		}
+
+		.lead-in {
+			margin: 0;
+			font-size: 1em;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			color: #999999;
+		}
+
+		.tagline {
+			margin: 0;
+			letter-spacing: 2px;
+			color: #cccccc;
+		}
+
+		hr {
+			margin: 25px auto 0px;
+			background: #999999;
+			width: 100px;
+			height: 2px;
+			border: 0;
+		}
+
+	}
+}
