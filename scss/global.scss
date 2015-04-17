@@ -7,6 +7,8 @@
 @import "_header.scss";
 @import "_splash.scss";
 @import "_projects.scss";
+@import "_single-projects.scss";
+@import "_footer.scss";
 
 * {
 	@include box-sizing(border-box);
@@ -24,4 +26,8 @@ img, video {
 	font-size: em(32);
 	text-transform: uppercase;
 	text-align: center;
+}
+
+.border {
+	border: 2px solid #8e9394;	
 }
