@@ -31,49 +31,66 @@
 
 	&:nth-of-type(odd) {
 
-		.info {
+		> div:first-child {
 			@include column(0.6, left, 5%);
 		}
-		.preview {
+
+		> div:last-child {
 			@include column(0.35, left, 0);
 		}
+
+		// .info {
+		// 	@include column(0.6, left, 5%);
+		// }
+		// .preview {
+		// 	@include column(0.35, left, 0);
+		// }
 
 	}
 
 	&:nth-of-type(even) {
-		
-		.info {
+
+		> div:first-child {
 			@include column(0.35, left, 5%);
 		}
-		.preview {
+
+		> div:last-child {
 			@include column(0.6, left, 0);
 		}
 
+		
+		// .info {
+		// 	@include column(0.35, left, 5%);
+		// }
+		// .preview {
+		// 	@include column(0.6, left, 0);
+		// }
+
 	}
 
-	.browser-showcase {
-		float: left;
-		width: 49%;
-		margin-right: 2%;
-		&:last-child {
-			margin-right: 0;
+}
+
+.browser-showcase {
+	float: left;
+	width: 49%;
+	margin-right: 2%;
+	&:last-child {
+		margin-right: 0;
+	}
+	.browser {
+		.viewport {
+			position: relative;
+			height: 500px;
+			overflow-y: scroll;
 		}
-		.browser {
-			.viewport {
-				position: relative;
-				height: 500px;
-				overflow-y: scroll;
-			}
-			.viewport--video {
-	            video {
-	                max-width: 100%;
-	                overflow: hidden;
-	                @include border-bottom-radius(6px);
-	            }				
-			}
+		.viewport--video {
+            video {
+                max-width: 100%;
+                overflow: hidden;
+                @include border-bottom-radius(6px);
+            }				
 		}
 	}
-
 }
 
 .inset {

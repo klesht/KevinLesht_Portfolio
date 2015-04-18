@@ -34,4 +34,5 @@ img, video {
 
 .module {
 	margin-top: 4em;
+	@include clearfix;
 }
