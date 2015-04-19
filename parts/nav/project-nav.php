@@ -1,31 +1,28 @@
-<?php
-    $pagelist = get_pages( array ('child_of' => 6, 'sort_column' => 'menu_order') );
-    $pages = array();
-    foreach ($pagelist as $page) {
-       $pages[] += $page->ID;
-    }
-
-    $current = array_search($post->ID, $pages);
-    $prevID = $pages[$current-1];
-    $nextID = $pages[$current+1];
-?>
-
 <nav class="container">
 
 	<a href="<?php echo site_url(); ?>" class="go-home">Kevin Lesht</a>
 
 	<ul>
 
-		<?php if (!empty($prevID)) { ?>
+		<?php if( get_adjacent_post(false, '', true) ) { ?>
 
-			<li><a href="<?php echo get_permalink($prevID); ?>"><span class="fa fa-chevron-left"></span>&nbsp;&nbsp;&nbsp;Last Project</a></li>
+		<li><?php previous_post_link('%link', '<span class="fa fa-chevron-left"></span>&nbsp;&nbsp;&nbsp;Last Project'); ?></li>
 		
-		<?php }
-		if (!empty($nextID)) { ?>
+		<?php } else { 
+		    $first = new WP_Query('posts_per_page=1&order=DESC&post_type=projects'); $first->the_post();
+		    	echo '<li><a href="' . get_permalink() . '"><span class="fa fa-chevron-left"></span>&nbsp;&nbsp;&nbsp;Last Project</a></li>';
+		  	wp_reset_query();
+		}; ?>
+		    
+		<?php if( get_adjacent_post(false, '', false) ) { ?>
 
-			<li><a href="<?php echo get_permalink($nextID); ?>">Next Project&nbsp;&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></a></li>
+		<li><?php next_post_link('%link', 'Next Project&nbsp;&nbsp;&nbsp;<span class="fa fa-chevron-right"></span>'); ?></li>
 		
-		<?php } wp_reset_query(); ?>
+		<?php } else { 
+			$last = new WP_Query('posts_per_page=1&order=ASC&post_type=projects'); $last->the_post();
+		    	echo '<li><a href="' . get_permalink() . '">Next Project&nbsp;&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></a></li>';
+		    wp_reset_query();
+		}; ?>
 
 	</ul>
 
