@@ -12,13 +12,17 @@ get_header(); ?>
 
 			<section class="container">
 
-				<h2 class="section-heading">Overview</h2>
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-				<div class="project-description">
+					<h2 class="section-heading">Overview</h2>
 
-					<?php the_content(); ?>
+					<div class="project-description">
 
-				</div>
+						<?php the_content(); ?>
+
+					</div>
+					
+				<?php endwhile; endif; ?>
 
 				<?php if( have_rows('project_case_study') ): ?>
 
@@ -35,6 +39,10 @@ get_header(); ?>
 						<?php elseif( get_row_layout() == 'mobile_and_text_module' ): ?>
 
 							<?php include(TEMPLATEPATH . '/parts/modules/mobile_and_text_module.php'); ?>
+
+						<?php elseif( get_row_layout() == 'browser_showcase_module' ): ?>
+
+							<?php include(TEMPLATEPATH . '/parts/modules/browser_showcase_module.php'); ?>							
 
 						<?php endif; ?>
 

@@ -1,20 +1,32 @@
 <div class="module split inset">
 
-	<div>
+	<?php if(get_sub_field('asset_type') == "Image") { ?>
 
-		<?php 
+		<div>
 
-	        $image = get_sub_field('media');
+			<?php 
 
-	        if( $image ) {
+		        $image = get_sub_field('image');
 
-	            echo wp_get_attachment_image( $image, 'full' );
+		        if( $image ) {
 
-	        }
+		            echo wp_get_attachment_image( $image, 'full' );
 
-	    ?>
+		        }
 
-	</div>
+		    ?>
+
+		</div>
+
+	<?php } if(get_sub_field('asset_type') == "Video") { ?>
+
+		<div>
+
+			<?php the_sub_field('video'); ?>
+
+		</div>
+
+	<?php } ?>
 
 	<div>
 
