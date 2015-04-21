@@ -1,4 +1,4 @@
-.project-description {
+.text {
 	@include column-count(2);
 	@include column-gap(1.5em);
 	@include clearfix;
@@ -93,10 +93,6 @@
 	}
 }
 
-.inset {
-	padding: 0 2em;
-}
-
 .mobile-preview {
 	list-style:none;
 	padding: 0;
@@ -110,4 +106,8 @@
 			margin-right: 0;
 		}
 	}
+}
+
+.inset {
+	padding: 0 2em;
 }

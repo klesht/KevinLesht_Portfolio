@@ -16,11 +16,9 @@ get_header(); ?>
 
 					<h2 class="section-heading">Overview</h2>
 
-					<div class="project-description">
+					<div class="module text">
 
 						<?php the_content(); ?>
-
-						<?php the_field('next_project_teaser'); ?>
 
 					</div>
 					
@@ -44,7 +42,11 @@ get_header(); ?>
 
 						<?php elseif( get_row_layout() == 'browser_showcase_module' ): ?>
 
-							<?php include(TEMPLATEPATH . '/parts/modules/browser_showcase_module.php'); ?>							
+							<?php include(TEMPLATEPATH . '/parts/modules/browser_showcase_module.php'); ?>
+
+						<?php elseif( get_row_layout() == 'text_module' ): ?>
+
+							<?php include(TEMPLATEPATH . '/parts/modules/text_module.php'); ?>													
 
 						<?php endif; ?>
 

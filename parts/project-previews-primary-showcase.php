@@ -1,4 +1,4 @@
-<ul class="projects container">
+<ul class="module projects container">
 
 	<?php if(get_field('project_previews_primary_showcase')): ?>
 
