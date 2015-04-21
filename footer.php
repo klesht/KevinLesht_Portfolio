@@ -1,3 +1,5 @@
+<?php if(is_front_page() ) { ?>
+
 	<footer class="index-footer">
 
 		<div class="container">
@@ -7,6 +9,30 @@
 		</div>
 
 	</footer>
+
+<?php } else { ?>
+
+	<footer class="next-project">
+
+		<a href="<?php echo get_field('next_project_link'); ?>">
+
+			<div class="teaser">
+
+				<span><?php echo get_field('next_project'); ?></span>
+
+			</div>
+
+			<div>
+
+				<span>Next Project</span>
+
+			</div>
+
+		</a>
+
+	</footer>
+
+<?php } ?>
 
 </main>
 

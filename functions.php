@@ -19,6 +19,7 @@ function kevinlesht_styles() {
   wp_enqueue_style( 'global' );
   wp_enqueue_style( 'google-fonts' );
   wp_enqueue_style( 'font-awesome' );
+  wp_enqueue_style( 'custom-styles', get_template_directory_uri() . '/scss/custom-styles.css' );
 
 }
 add_action('wp_enqueue_scripts', 'kevinlesht_styles');
@@ -36,6 +37,33 @@ function kevinlesht_js() {
     }
 }
 add_action('init', 'kevinlesht_js');
+
+// Page Slug Body Class
+function add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );
+
+// Clean up the head
+function head_cleanup() {
+  remove_action('wp_head', 'feed_links', 2);
+  remove_action('wp_head', 'feed_links_extra', 3);
+  remove_action('wp_head', 'rsd_link');
+  remove_action('wp_head', 'wlwmanifest_link');
+  remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+  remove_action('wp_head', 'wp_generator');
+  remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+
+  global $wp_widget_factory;
+  remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+
+  add_filter('use_default_gallery_style', '__return_null');
+}
+add_action('init', 'head_cleanup');
 
 // Register Custom Post Type
 function projects_post_type() {

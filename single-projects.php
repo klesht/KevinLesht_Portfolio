@@ -20,6 +20,8 @@ get_header(); ?>
 
 						<?php the_content(); ?>
 
+						<?php the_field('next_project_teaser'); ?>
+
 					</div>
 					
 				<?php endwhile; endif; ?>

@@ -5,6 +5,16 @@
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
 <?php wp_head(); ?>
+<?php if ( is_singular( 'projects' ) ) { ?>
+    <style>
+    	.splash--project {
+    		<?php echo get_field('project_splash'); ?>
+    	}
+	    .teaser {
+	    	<?php echo get_field('next_project_teaser'); ?>
+	    }
+    </style>
+<?php } ?>
 </head>
 <body <?php body_class(); ?>>
 

@@ -1,6 +1,6 @@
 <?php if(is_front_page() ) { ?>
 
-	<section class="splash home-splash">
+	<section class="splash splash--home">
 
 		<div class="page-intro">
 
@@ -15,7 +15,7 @@
 
 <?php } else { ?>
 
-	<section class="splash codeoncamera-splash">
+	<section class="splash splash--project">
 
 		<div class="page-intro">
 
