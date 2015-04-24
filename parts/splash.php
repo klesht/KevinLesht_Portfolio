@@ -19,10 +19,8 @@
 
 		<div class="page-intro">
 
-			<h6 class="lead-in">The online portfolio of</h6>
-			<h1><?php the_title(); ?></h1>
-			<h6 class="tagline">User Experience Designer &amp; Front-End Developer</h6>
-			<hr>
+			<?php the_post_thumbnail();?>
+			<h1 class="project-description"><?php echo get_field('project_description'); ?></h1>
 
 		</div>
 
