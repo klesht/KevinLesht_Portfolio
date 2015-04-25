@@ -19,7 +19,6 @@ function kevinlesht_styles() {
   wp_enqueue_style( 'global' );
   wp_enqueue_style( 'google-fonts' );
   wp_enqueue_style( 'font-awesome' );
-  wp_enqueue_style( 'custom-styles', get_template_directory_uri() . '/scss/custom-styles.css' );
 
 }
 add_action('wp_enqueue_scripts', 'kevinlesht_styles');
@@ -50,18 +49,20 @@ add_filter( 'body_class', 'add_slug_body_class' );
 
 // Clean up the head
 function head_cleanup() {
-  remove_action('wp_head', 'feed_links', 2);
-  remove_action('wp_head', 'feed_links_extra', 3);
-  remove_action('wp_head', 'rsd_link');
-  remove_action('wp_head', 'wlwmanifest_link');
-  remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
-  remove_action('wp_head', 'wp_generator');
-  remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+	remove_action('wp_head', 'feed_links', 2);
+	remove_action('wp_head', 'feed_links_extra', 3);
+	remove_action('wp_head', 'rsd_link');
+	remove_action('wp_head', 'wlwmanifest_link');
+	remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+	remove_action('wp_head', 'wp_generator');
+	remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
-  global $wp_widget_factory;
-  remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+	global $wp_widget_factory;
+	remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
 
-  add_filter('use_default_gallery_style', '__return_null');
+	add_filter('use_default_gallery_style', '__return_null');
 }
 add_action('init', 'head_cleanup');
 
@@ -72,7 +73,7 @@ function projects_post_type() {
 		'name'                => _x( 'Projects', 'Post Type General Name', 'text_domain' ),
 		'singular_name'       => _x( 'Project', 'Post Type Singular Name', 'text_domain' ),
 		'menu_name'           => __( 'Projects', 'text_domain' ),
-		'name_admin_bar'      => __( 'Post Type', 'text_domain' ),
+		'name_admin_bar'      => __( 'Project', 'text_domain' ),
 		'parent_item_colon'   => __( 'Parent Project:', 'text_domain' ),
 		'all_items'           => __( 'All Projects', 'text_domain' ),
 		'add_new_item'        => __( 'Add New Project', 'text_domain' ),
@@ -108,8 +109,6 @@ function projects_post_type() {
 	register_post_type( 'projects', $args );
 
 }
-
-// Hook into the 'init' action
 add_action( 'init', 'projects_post_type', 0 );
 
 ?>

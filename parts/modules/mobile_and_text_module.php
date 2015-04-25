@@ -1,4 +1,4 @@
-<div class="module split">
+<div class="module mobile-preview">
 
 	<div>
 
@@ -10,7 +10,7 @@
 
 	<div>
 
-		<ul class="mobile-preview">
+		<ul>
 
 			<li>
 

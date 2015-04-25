@@ -13,6 +13,41 @@
 }
 
 .split {
+	> div:first-child {
+		@include column(0.6, left, 5%);
+	}
+
+	> div:last-child {
+		@include column(0.35, left, 0);
+	}
+}
+
+.mobile-preview {
+	> div:first-child {
+		@include column(0.35, left, 5%);
+	}
+
+	> div:last-child {
+		@include column(0.6, left, 0);
+	}	
+
+	ul {
+		list-style:none;
+		padding: 0;
+		margin: 0;
+		@include clearfix;
+
+		li {
+			@include column(.48);
+			margin-right: 4%;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.split, .mobile-preview {
 	@include clearfix;
 
 	h3 {
@@ -28,46 +63,6 @@
 		line-height: em(29);
 		font-weight: 300;
 	}
-
-	&:nth-of-type(odd) {
-
-		> div:first-child {
-			@include column(0.6, left, 5%);
-		}
-
-		> div:last-child {
-			@include column(0.35, left, 0);
-		}
-
-		// .info {
-		// 	@include column(0.6, left, 5%);
-		// }
-		// .preview {
-		// 	@include column(0.35, left, 0);
-		// }
-
-	}
-
-	&:nth-of-type(even) {
-
-		> div:first-child {
-			@include column(0.35, left, 5%);
-		}
-
-		> div:last-child {
-			@include column(0.6, left, 0);
-		}
-
-		
-		// .info {
-		// 	@include column(0.35, left, 5%);
-		// }
-		// .preview {
-		// 	@include column(0.6, left, 0);
-		// }
-
-	}
-
 }
 
 .browser-showcase {
@@ -89,21 +84,6 @@
                 overflow: hidden;
                 @include border-bottom-radius(6px);
             }				
-		}
-	}
-}
-
-.mobile-preview {
-	list-style:none;
-	padding: 0;
-	margin: 0;
-	@include clearfix;
-
-	li {
-		@include column(.48);
-		margin-right: 4%;
-		&:last-child {
-			margin-right: 0;
 		}
 	}
 }
