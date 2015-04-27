@@ -4,7 +4,7 @@
  * @subpackage Kevin Lesht
  */
 
-get_header(); ?>
+get_header('projects'); ?>
 
 		<?php include(TEMPLATEPATH . '/parts/splash.php'); ?>
 
@@ -60,4 +60,4 @@ get_header(); ?>
 
 			</section>
 
-<?php get_footer(); ?>
+<?php get_footer('projects'); ?>

@@ -11,9 +11,11 @@
 		// z-index: 3;
 		
 		h1 {
-			margin: 40px;
+			margin: 20px;
 			font-size: 5em;
 			line-height: 80px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
 			color: #000;
 		}
 
@@ -27,8 +29,10 @@
 
 		.tagline {
 			margin: 0;
+			font-size: 0.8em;
 			letter-spacing: 2px;
-			color: #cccccc;
+			text-transform: uppercase;
+			color: #c4c4c4;
 		}
 
 		.project-description {
@@ -52,7 +56,9 @@
 // Page splashes to be injected via wp custom field
 
 .splash--home {
-	background: antiquewhite;
+	background: url("../images/home-splash.jpg");
+	background-size:cover;
+	background-position: 50% 50%;
 }
 
 .codeoncamera-splash {
