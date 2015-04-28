@@ -11,15 +11,11 @@ get_header(); ?>
 
 	<main>
 
-		<section>
+		<section class="test-section" id="projects">
 
 			<h2 class="section-heading">Projects</h2>
 
 			<?php include(TEMPLATEPATH . '/parts/project-previews-primary-showcase.php'); ?>
-
-		</section>
-
-		<section>
 
 			<h2 class="section-heading">More Projects</h2>
 
