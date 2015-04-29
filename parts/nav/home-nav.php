@@ -4,8 +4,8 @@
 
 	<ul>
 
-		<li><a href="#projects">Projects</a></li>
-		<li><a href="#contact">Contact</a></li>
+		<li><a href="#projects" class="goto">Projects</a></li>
+		<li><a href="#contact" class="goto">Contact</a></li>
 
 		<li><a href="#"><span class="fa fa-codepen"></span></a></li>
 		<li><a href="#"><span class="fa fa-github"></span></a></li>

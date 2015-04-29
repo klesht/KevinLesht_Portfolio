@@ -39,6 +39,7 @@
 				a {
 					position: relative;
 					padding-bottom: 10px;
+					@include backface-visibility(hidden);
 					&:after {
 						content: '';
 						position: absolute;

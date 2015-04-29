@@ -1,3 +1,4 @@
+// Nav effects
 $(document).ready(function($){
 
 	var headerNav = $('.top-navigation'),
@@ -6,9 +7,9 @@ $(document).ready(function($){
 	$(window).on('scroll', function() {
 
 		if ($(this).scrollTop() >= 550) {
-			$(".top-navigation").addClass("shrink");
+			$('.top-navigation').addClass('shrink');
 		} else {
-			$(".top-navigation").removeClass("shrink");
+			$('.top-navigation').removeClass('shrink');
 		}
 
 		updateHeaderNav();
@@ -30,8 +31,8 @@ $(document).ready(function($){
 		});
 	}
 	
-	headerNav.find('ul a').on('click', function(event){
-        event.preventDefault();
+	headerNav.find('ul a.goto').on('click', function(e){
+        e.preventDefault();
         var target= $(this.hash);
         $('body,html').stop().animate({
         	'scrollTop': target.offset().top - headerNav.height() + 1
@@ -40,3 +41,18 @@ $(document).ready(function($){
     });
 
 });
+
+// Parallax effects
+$(window).scroll(function(e){
+	scrollBanner();
+});
+
+function scrollBanner() {
+
+	scrollPos = $(this).scrollTop();
+
+	$('.page-intro').css({
+		'top' : -(scrollPos/10)+"px"
+	});
+
+}
