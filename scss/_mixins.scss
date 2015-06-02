@@ -1,5 +1,0 @@
-@mixin column($percentage, $float-direction:left, $column-gutter:0) {
-	width: 100% * $percentage;
-	float: $float-direction;
-	margin-right: $column-gutter;
-}

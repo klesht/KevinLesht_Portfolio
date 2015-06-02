@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<main>
 
-		<section class="test-section" id="projects">
+		<section id="projects">
 
 			<h2 class="section-heading">Projects</h2>
 

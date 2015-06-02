@@ -1,7 +1,9 @@
 .text {
-	@include column-count(2);
-	@include column-gap(1.5em);
-	@include clearfix;
+
+	@include MQ(M) {
+		@include column-count(2);
+		@include column-gap(1.5em);		
+	}
 	p {
 		font-size: em(20);
 		line-height: em(30);
@@ -13,23 +15,28 @@
 }
 
 .split {
-	> div:first-child {
-		@include column(0.6, left, 5%);
-	}
+	@include MQ(M) {
+		> div:first-child {
+			@include column(0.6, left, 5%);
+		}
 
-	> div:last-child {
-		@include column(0.35, left, 0);
+		> div:last-child {
+			@include column(0.35, left, 0);
+		}		
 	}
 }
 
 .mobile-preview {
-	> div:first-child {
-		@include column(0.35, left, 5%);
-	}
 
-	> div:last-child {
-		@include column(0.6, left, 0);
-	}	
+	@include MQ(M) {
+		> div:first-child {
+			@include column(0.35, left, 5%);
+		}
+
+		> div:last-child {
+			@include column(0.6, left, 0);
+		}		
+	}
 
 	ul {
 		list-style:none;
@@ -38,10 +45,16 @@
 		@include clearfix;
 
 		li {
-			@include column(.48);
-			margin-right: 4%;
-			&:last-child {
-				margin-right: 0;
+			max-width: 375px;
+			margin: 0 auto;
+			margin-bottom: 4em;
+			@include MQ(M) {
+				@include column(.48);
+				margin-right: 4%;
+				margin-bottom: 0;
+				&:last-child {
+					margin-right: 0;
+				}				
 			}
 		}
 	}
@@ -66,9 +79,14 @@
 }
 
 .browser-showcase {
-	float: left;
-	width: 49%;
-	margin-right: 2%;
+	margin-bottom: 4em;
+	@include MQ(M) {
+		float: left;
+		width: 49%;
+		margin-right: 2%;
+		margin-bottom: 0;		
+	}
+
 	&:last-child {
 		margin-right: 0;
 	}
@@ -85,6 +103,10 @@
                 @include border-bottom-radius(6px);
             }				
 		}
+	}
+	.browser--video {
+		max-width: 638px;
+		margin: 0 auto;
 	}
 }
 

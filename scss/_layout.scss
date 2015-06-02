@@ -1,3 +1,30 @@
+$S:     480px;   
+$M:     960px;  
+$L:    1025px;   
+$XL:   1441px;     
+
+// media queries
+@mixin MQ($canvas) {
+    @if $canvas == S {
+        @media only screen and (min-width: $S) { @content; } 
+    }
+    @else if $canvas == M {
+        @media only screen and (min-width: $M) { @content; } 
+    }
+    @else if $canvas == L {
+        @media only screen and (min-width: $L) { @content; } 
+    }
+    @else if $canvas == XL {
+        @media only screen and (min-width: $XL) { @content; } 
+    }
+}
+
+@mixin column($percentage, $float-direction:left, $column-gutter:0) {
+	width: 100% * $percentage;
+	float: $float-direction;
+	margin-right: $column-gutter;
+}
+
 main {
 	position: relative;
 	top: 650px;

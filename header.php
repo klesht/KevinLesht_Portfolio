@@ -15,6 +15,6 @@
 
 	<header class="top-navigation">
 
-		<?php include(TEMPLATEPATH . '/parts/nav/home-nav.php'); ?>
+		<?php include(TEMPLATEPATH . '/parts/nav/home-header-nav.php'); ?>
 
 	</header>

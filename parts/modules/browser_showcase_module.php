@@ -2,16 +2,16 @@
 
 	<div class="browser-showcase">
 
-		<div class="browser">
+		<?php if(get_sub_field('asset_type') == "Image") { ?>
 
-			<div class="top">
+			<div class="browser">
 
-				<ul><li></li><li></li><li></li></ul>
-				<span><?php the_sub_field('page_url_1'); ?></span>
+				<div class="top">
 
-			</div>
+					<ul><li></li><li></li><li></li></ul>
+					<span><?php the_sub_field('page_url_1'); ?></span>
 
-			<?php if(get_sub_field('asset_type') == "Image") { ?>
+				</div>
 
 				<div class="viewport">
 
@@ -29,32 +29,43 @@
 
 				</div>
 
-			<?php } if(get_sub_field('asset_type') == "Video") { ?>
+			</div>
+
+		<?php } if(get_sub_field('asset_type') == "Video") { ?>
+
+			<div class="browser browser--video">
+
+				<div class="top">
+
+					<ul><li></li><li></li><li></li></ul>
+					<span><?php the_sub_field('page_url_1'); ?></span>
+
+				</div>
 
 				<div class="viewport--video">
 
 					<?php the_sub_field('browser_video_1'); ?>
 
 				</div>
-			
-			<?php } ?>
 
-		</div>
+			</div>
+
+		<?php } ?>
 
 	</div>
 
 	<div class="browser-showcase">
 
-		<div class="browser">
+		<?php if(get_sub_field('asset_type_2') == "Image") { ?>
 
-			<div class="top">
+			<div class="browser">
 
-				<ul><li></li><li></li><li></li></ul>
-				<span><?php the_sub_field('page_url_2'); ?></span>
+				<div class="top">
 
-			</div>
+					<ul><li></li><li></li><li></li></ul>
+					<span><?php the_sub_field('page_url_2'); ?></span>
 
-			<?php if(get_sub_field('asset_type_2') == "Image") { ?>
+				</div>
 
 				<div class="viewport">
 
@@ -72,17 +83,28 @@
 
 				</div>
 
-			<?php } if(get_sub_field('asset_type_2') == "Video") { ?>
+			</div>
+
+		<?php } if(get_sub_field('asset_type_2') == "Video") { ?>
+
+			<div class="browser browser--video">
+
+				<div class="top">
+
+					<ul><li></li><li></li><li></li></ul>
+					<span><?php the_sub_field('page_url_2'); ?></span>
+
+				</div>
 
 				<div class="viewport--video">
 
 					<?php the_sub_field('browser_video_2'); ?>
 
 				</div>
-			
-			<?php } ?>
 
-		</div>
+			</div>
+
+		<?php } ?>
 
 	</div>
 

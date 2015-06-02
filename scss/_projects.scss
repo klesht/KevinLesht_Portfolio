@@ -2,26 +2,30 @@
 	list-style: none;
 	padding: 0;
 	li {
-		margin-bottom: 6em;
+		width: 100%;
+		margin-bottom: 3em;
 		@include clearfix;
 
-		&:nth-child(odd) .project-preview {
-			@include column(.6, right, 0);
-			.browser {
-				float: right;
+		@include MQ(M) {
+			margin-bottom: 6em;
+			&:nth-child(odd) .project-preview {
+				@include column(.6, right, 0);
+				.browser {
+					float: right;
+				}
 			}
-		}
-		&:nth-child(even) .project-preview {
-			@include column(.6, left, 5%);
-			.mobile {
-				right: 0;
+			&:nth-child(even) .project-preview {
+				@include column(.6, left, 5%);
+				.mobile {
+					right: 0;
+				}
 			}
-		}
-		&:nth-child(odd) .project-info {
-			@include column(.35, left, 5%);
-		}
-		&:nth-child(even) .project-info {
-			@include column(.35, right, 0);
+			&:nth-child(odd) .project-info {
+				@include column(.35, left, 5%);
+			}
+			&:nth-child(even) .project-info {
+				@include column(.35, right, 0);
+			}			
 		}
 
 		.project-preview {
@@ -48,11 +52,8 @@
 	list-style: none;
 	padding: 0;
 	li {
-		@include column(.32);
-		margin: 0 2% 2.8em 0;
-		&:nth-child(3n) {
-			margin-right: 0;
-		}
+		width: 100%;
+		margin-bottom: 3em;
 
 		h3 {
 			text-align: center;
@@ -60,15 +61,33 @@
 			font-weight: 400;
 			height: em(50);
 		}
+
+		@include MQ(M) {
+			@include column(.32);
+			margin: 0 2% 2.8em 0;
+			&:nth-child(3n) {
+				margin-right: 0;
+			}			
+		}
+
 	}
+}
+
+.browser, .mobile {
+	transform: scale(1) rotate(0deg) translate(0);
 }
 
 .mobile {
 	z-index: 1;
 	border: 2px solid #8e9394;
-	border-radius: 20px;
+	border-radius: 10px;
 	background: #fff;
 	text-align: center;
+
+	@include MQ(M) {
+		border-radius: 20px;
+	}
+
 	img {
 		width: 100%;
 		height: auto;
@@ -91,45 +110,95 @@
 
 .mobile--preview {
 	position: absolute;
-	top: 20%;
+	top: 30%;
 	width: 25%;
-	min-width: 160px;
-	max-width: 220px;
-	padding: 0 10px;
+	min-width: 0;
+	padding: 0 1%;
+
+	@include MQ(M) {
+		top: 20%;
+		min-width: 160px;
+		max-width: 220px;
+		padding: 0 10px;
+	}
+
+
 	img {
 		border: 2px solid #8e9394;
 	}
 	.top {
-		height: 54px;
+		height: 26px;
+
+		@include MQ(M) {
+			height: 54px;
+		}
+
 		.camera {
-			top: 15px;
+			top: 8px;
+
+			@include MQ(M) {
+				top: 15px;
+			}
 			span {
-				width: 8px;
-				height: 8px;
+				width: 4px;
+				height: 4px;
 				border-radius: 4px;
+
+				@include MQ(M) {
+					width: 8px;
+					height: 8px;	
+				}
 			}
 		}
 		.speaker {
-			top: 32px;
+			top: 16px;
+
+			@include MQ(M) {
+				top: 32px;	
+			}
+
 			span {
-				width: 34px;
-				height: 4px;
+				width: 18px;
+				height: 2px;
 				border-radius: 2px;
+
+				@include MQ(M) {
+					width: 34px;
+					height: 4px;					
+				}
+
 			}
 		}
 	} 
 	.bottom {
-		height: 54px;
+		height: 26px;
+
+		@include MQ(M) {
+			height: 54px;			
+		}
+
 		span {
 			border: 2px solid #8e9394;
 			background: none;
 		}
 		div {
-			top: 9px;
+			top: 4px;
+
+			@include MQ(M) {
+				top: 9px;
+			}
+
 			span {
-				width: 34px;
-				height: 34px;
-				border-radius: 17px;
+				width: 16px;
+				height: 16px;
+				border-radius: 8px;
+
+				@include MQ(M) {
+					width: 34px;
+					height: 34px;
+					border-radius: 17px;					
+				}
+
 			}
 		}
 	}
@@ -231,7 +300,12 @@
 }
 
 .browser--small {
-	width: 90%;
+	margin: 0 auto;
+	max-width: 780px;
+	@include MQ(M) {
+		width: 90%;		
+	}
+
 }
 
 .browser--large {

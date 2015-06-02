@@ -2,7 +2,7 @@
 $(document).ready(function($){
 
 	var headerNav = $('.top-navigation'),
-		contentSections = $('.test-section');
+		contentSections = $('section');
 
 	$(window).on('scroll', function() {
 

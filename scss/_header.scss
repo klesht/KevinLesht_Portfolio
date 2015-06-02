@@ -28,12 +28,26 @@
 
 			li {
 				display: inline-block;
-				margin-left: 4em;
+				margin-left: 1em;
+				
+				@include MQ(S) {
+					margin-left: 4em;	
+				}
+
 				&:first-child {
 					margin-left: 0;
 				}
-				&:nth-child(n+4) {
-					margin-left: 2em;
+				&:nth-child(n+3) {
+					display: none;
+				}
+
+				@include MQ(M) {
+					&:nth-child(n+3) {
+						display: inline-block;
+					}
+					&:nth-child(n+4) {
+						margin-left: 2em;
+					}
 				}
 
 				a {
