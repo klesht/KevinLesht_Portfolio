@@ -23,11 +23,19 @@
 				}
 			}
 		}
+
+		@include MQ(M) {
+			display: none;
+		}
 	}
 
 	p {
 		display: none;
 		margin: 0;
+
+		@include MQ(M) {
+			display: block;
+		}
 	}
 }
 
