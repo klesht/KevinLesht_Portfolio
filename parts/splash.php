@@ -1,4 +1,4 @@
-<?php if(is_front_page() ) { ?>
+<?php if ( is_front_page() || is_post_type_archive('projects') ) { ?>
 
 	<section class="splash splash--home">
 
@@ -19,7 +19,18 @@
 
 		<div class="page-intro">
 
-			<?php the_post_thumbnail();?>
+			<?php 
+
+                $image = get_field('project_logo');
+
+                if( $image ) {
+
+                    echo wp_get_attachment_image( $image, $size );
+
+                }
+
+            ?>
+
 			<h1 class="project-description"><?php echo get_field('project_description'); ?></h1>
 
 		</div>

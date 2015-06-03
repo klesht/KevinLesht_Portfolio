@@ -5,11 +5,19 @@
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
 <?php wp_head(); ?>
-    <style>
-    	.top-navigation nav a {
-    		color: <?php echo get_field('project_nav_color'); ?>;
-    	}
-    </style>
+    <?php if ( is_post_type_archive('projects') ) { ?>
+	   	<style>
+	    	.top-navigation nav a {
+	    		color: #000;
+	    	}
+	    </style>
+    <?php } else { ?>
+	    <style>
+	    	.top-navigation nav a {
+	    		color: <?php echo get_field('project_nav_color'); ?>;
+	    	}
+	    </style>
+    <?php } ?>
 </head>
 <body <?php body_class(); ?>>
 
