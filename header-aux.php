@@ -14,8 +14,20 @@
 </head>
 <body <?php body_class(); ?>>
 
-	<header class="top-navigation">
+	<?php if ( is_404() ) { ?>
 
-		<?php include(TEMPLATEPATH . '/parts/nav/home-header-nav.php'); ?>
+		<header class="top-navigation top-navigation--fixed">
 
-	</header>
+			<?php include(TEMPLATEPATH . '/parts/nav/aux-header-nav.php'); ?>
+
+		</header>
+
+	<?php } else { ?>
+
+		<header class="top-navigation">
+
+			<?php include(TEMPLATEPATH . '/parts/nav/aux-header-nav.php'); ?>
+
+		</header>
+
+	<?php } ?>
