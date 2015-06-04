@@ -52,8 +52,6 @@
 	}
 }
 
-// Page splashes to be injected via wp custom field
-
 .splash--home {
 	background: url("../images/home-splash.jpg");
 	background-size:cover;
@@ -61,28 +59,4 @@
 	h1 {
 		text-transform: uppercase;
 	}
-}
-
-.codeoncamera-splash {
-	background: darkslategray;
-}
-
-.jcsports-splash {
-	background: rosybrown;
-}
-
-.conorpelton-splash {
-	background: lavender;
-}
-
-.pei-splash {
-	background: darkred;
-}
-
-.cnine-splash {
-	background: deepskyblue;
-}
-
-.rmmtc-splash {
-	background: darkcyan;
 }
