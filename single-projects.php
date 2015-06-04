@@ -1,18 +1,19 @@
 <?php
 /**
+ * The template for displaying all single projects.
  * @package WordPress
  * @subpackage Kevin Lesht
  */
 
 get_header('projects'); ?>
 
-		<?php include(TEMPLATEPATH . '/parts/splash.php'); ?>
+		<?php get_template_part( 'parts/splash' ); ?>
 
 		<main class="main">
 
-			<section class="container">
+			<div class="container">
 
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
 					<h2 class="section-heading">Overview</h2>
 
@@ -22,42 +23,38 @@ get_header('projects'); ?>
 
 					</div>
 					
-				<?php endwhile; endif; ?>
+				<?php endwhile; ?>
 
-				<?php if( have_rows('project_case_study') ): ?>
+				<?php if( have_rows('project_case_study') ): while ( have_rows('project_case_study') ) : the_row(); ?>
 
-					<?php while ( have_rows('project_case_study') ) : the_row(); ?>
+					<?php if( get_row_layout() == 'full_width_browser_module' ): ?>
 
-						<?php if( get_row_layout() == 'full_width_browser_module' ): ?>
+						<?php get_template_part( 'parts/module', 'full_width_browser' ); ?>
 
-							<?php include(TEMPLATEPATH . '/parts/modules/full_width_browser_module.php'); ?>
+					<?php elseif( get_row_layout() == 'media_and_text_module' ): ?>
 
-						<?php elseif( get_row_layout() == 'media_and_text_module' ): ?>
+						<?php get_template_part( 'parts/module', 'media_and_text' ); ?>
 
-							<?php include(TEMPLATEPATH . '/parts/modules/media_and_text_module.php'); ?>
+					<?php elseif( get_row_layout() == 'mobile_and_text_module' ): ?>
 
-						<?php elseif( get_row_layout() == 'mobile_and_text_module' ): ?>
+						<?php get_template_part( 'parts/module', 'mobile_and_text' ); ?>
 
-							<?php include(TEMPLATEPATH . '/parts/modules/mobile_and_text_module.php'); ?>
+					<?php elseif( get_row_layout() == 'browser_showcase_module' ): ?>
 
-						<?php elseif( get_row_layout() == 'browser_showcase_module' ): ?>
+						<?php get_template_part( 'parts/module', 'browser_showcase' ); ?>
 
-							<?php include(TEMPLATEPATH . '/parts/modules/browser_showcase_module.php'); ?>
+					<?php elseif( get_row_layout() == 'text_module' ): ?>
 
-						<?php elseif( get_row_layout() == 'text_module' ): ?>
+						<?php get_template_part( 'parts/module', 'text_module' ); ?>													
 
-							<?php include(TEMPLATEPATH . '/parts/modules/text_module.php'); ?>													
+				<?php endif; endwhile; ?>
 
-						<?php endif; ?>
+				<?php else : ?>
 
-					<?php endwhile; ?>
-
-					<?php else : ?>
-
-						<h6>No layouts found.</h6>
+					<h6>No layouts found.</h6>
 
 				<?php endif; ?>	
 
-			</section>
+			</div>
 
 <?php get_footer('projects'); ?>

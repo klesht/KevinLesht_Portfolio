@@ -1,10 +1,20 @@
+<?php
+/**
+ * The template for displaying the footer.
+ * Contains the closing of the main element and all content after
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
+
+?>
+
 	<footer class="index-footer">
 
 		<div class="container">
 
 			<nav>
 				<ul>
-					<?php include(TEMPLATEPATH . '/parts/nav/social-nav.php'); ?>
+					<?php get_template_part( 'parts/nav', 'social' ); ?>
 				</ul>
 			</nav>
 
@@ -16,7 +26,7 @@
 
 </main>
 
-<?php include(TEMPLATEPATH . '/parts/contact-modal.php'); ?>
+<?php get_template_part( 'parts/contact', 'modal' ); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

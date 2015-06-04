@@ -1,3 +1,12 @@
+<?php
+/**
+ * Template part for displaying the browser showcase module.
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
+
+?>
+
 <div class="module">
 
 	<div class="browser-showcase">

@@ -1,4 +1,13 @@
-<nav class="container">
+<?php
+/**
+ * Template part for displaying the single project nav.
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
+
+?>
+
+<nav class="container" role="navigation">
 
 	<a href="<?php echo site_url(); ?>" class="go-home">Kevin Lesht</a>
 

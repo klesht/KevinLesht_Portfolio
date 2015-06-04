@@ -1,3 +1,12 @@
+<?php
+/**
+ * Template part for displaying the mobile and text module.
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
+
+?>
+
 <div class="module mobile-preview">
 
 	<div>

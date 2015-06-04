@@ -1,5 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+/**
+ * The default header template part.
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
+
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +31,6 @@
 
 	<header class="top-navigation top-navigation--fixed">
 
-		<?php include(TEMPLATEPATH . '/parts/nav/home-header-nav.php'); ?>
+		<?php get_template_part( 'parts/nav' ); ?>
 
 	</header>

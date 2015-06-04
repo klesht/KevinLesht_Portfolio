@@ -7,20 +7,16 @@
 
 get_header(); ?>
 
-	<?php include(TEMPLATEPATH . '/parts/splash.php'); ?>
+	<?php get_template_part( 'parts/splash' ); ?>
 
-	<main class="main">
+	<main class="main" role="main">
 
-		<section id="projects">
+		<div id="projects">
 
-			<h2 class="section-heading">Projects</h2>
+			<?php get_template_part( 'parts/showcase', 'primary' ); ?>
 
-			<?php include(TEMPLATEPATH . '/parts/project-previews-primary-showcase.php'); ?>
+			<?php get_template_part( 'parts/showcase', 'secondary' ); ?>
 
-			<h2 class="section-heading">More Projects</h2>
-
-			<?php include(TEMPLATEPATH . '/parts/project-previews-secondary-showcase.php'); ?>
-
-		</section>
+		</div>
 
 <?php get_footer(); ?>

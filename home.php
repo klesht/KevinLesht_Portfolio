@@ -7,9 +7,9 @@
 
 get_header('aux'); ?>
 
-	<main>
+	<main role="main">
 
-		<section class="container--small">
+		<div class="container--small">
 
 			<h1>Blog</h1>
 
@@ -31,6 +31,6 @@ get_header('aux'); ?>
 
 			<?php the_posts_navigation(); ?>
 
-		</section>
+		</div>
 
 <?php get_footer(); ?>

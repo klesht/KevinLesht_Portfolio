@@ -1,3 +1,13 @@
+<?php
+/**
+ * The template for displaying the single projects footer.
+ * Contains the closing of the main element and all content after
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
+
+?>
+
 	<footer class="next-project">
 
 		<a href="<?php echo get_field('next_project_link'); ?>">

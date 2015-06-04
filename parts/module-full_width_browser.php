@@ -1,3 +1,12 @@
+<?php
+/**
+ * Template part for displaying the full width browser module.
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
+
+?>
+
 <div class="module browser">
 
 	<div class="top">

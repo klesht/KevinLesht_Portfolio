@@ -1,3 +1,12 @@
+<?php
+/**
+ * Template part for displaying the media and text module.
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
+
+?>
+
 <div class="module split inset">
 
 	<?php if(get_sub_field('asset_type') == "Image") { ?>

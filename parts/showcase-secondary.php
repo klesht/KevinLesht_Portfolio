@@ -1,3 +1,14 @@
+<?php
+/**
+ * Template part for displaying the secondary project preview showcase.
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
+
+?>
+
+<h2 class="section-heading">More Projects</h2>
+
 <ul class="module more-projects container">
 
 	<?php if(get_field('project_previews_secondary_showcase')): ?>

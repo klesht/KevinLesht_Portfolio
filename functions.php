@@ -1,4 +1,9 @@
 <?php
+/**
+ * Functions
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
 
 // Basic support
 function kevinlesht_theme_support() {

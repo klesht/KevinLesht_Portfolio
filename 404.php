@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: 404
+ * The template for displaying 404 pages (not found).
  * @package WordPress
  * @subpackage Kevin Lesht
  */
@@ -21,7 +21,7 @@ get_header('aux'); ?>
 
 	<main class="main">
 
-		<section id="projects">
+		<div id="projects">
 		<?php $custom_post_type = 'projects'; $args=array( 'post_type' => $custom_post_type, 'order' => 'ASC' ); ?>
 		<?php $projects_query = new WP_Query($args); if( $projects_query->have_posts() ) { ?>
 
@@ -53,6 +53,6 @@ get_header('aux'); ?>
 			</ul>
 
 		<?php wp_reset_query(); ?>
-		</section>
+		</div>
 
 <?php get_footer(); ?>

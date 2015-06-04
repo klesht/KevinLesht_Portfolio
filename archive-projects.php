@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Projects Archive
+ * The template for displaying the project archives.
  * @package WordPress
  * @subpackage Kevin Lesht
  */
@@ -9,9 +9,9 @@ get_header(); ?>
 
 	<?php include(TEMPLATEPATH . '/parts/splash.php'); ?>
 
-	<main class="main">
+	<main class="main" role="main">
 
-		<section id="projects">
+		<div id="projects">
 		<?php $custom_post_type = 'projects'; $args=array( 'post_type' => $custom_post_type, 'order' => 'ASC' ); ?>
 		<?php $projects_query = new WP_Query($args); if( $projects_query->have_posts() ) { ?>
 
@@ -43,6 +43,6 @@ get_header(); ?>
 			</ul>
 
 		<?php wp_reset_query(); ?>
-		</section>
+		</div>
 
 <?php get_footer(); ?>

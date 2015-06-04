@@ -1,3 +1,12 @@
+<?php
+/**
+ * Template part for displaying the page splash.
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
+
+?>
+
 <?php if ( is_front_page() || is_post_type_archive('projects') ) { ?>
 
 	<section class="splash splash--home">
@@ -5,8 +14,8 @@
 		<div class="page-intro">
 
 			<h6 class="lead-in">The online portfolio of</h6>
-			<h1><?php bloginfo('name'); ?></h1>
-			<h6 class="tagline"><?php bloginfo('description'); ?></h6>
+			<h1><?php bloginfo( 'name' ); ?></h1>
+			<h6 class="tagline"><?php bloginfo( 'description' ); ?></h6>
 			<hr>
 
 		</div>

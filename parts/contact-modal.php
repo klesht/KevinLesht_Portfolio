@@ -1,3 +1,12 @@
+<?php
+/**
+ * Template part for displaying the contact modal.
+ * @package WordPress
+ * @subpackage Kevin Lesht
+ */
+
+?>
+
 <div class="modal">
 
 	<div class="modal-container">
