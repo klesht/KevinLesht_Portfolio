@@ -92,6 +92,7 @@ function projects_post_type() {
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'author', 'thumbnail' ),
 		'taxonomies'          => array( 'category', 'post_tag' ),
+		'rewrite' 			  => array( 'with_front' => false ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,

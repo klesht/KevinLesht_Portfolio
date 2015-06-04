@@ -8,7 +8,7 @@ get_header('projects'); ?>
 
 		<?php include(TEMPLATEPATH . '/parts/splash.php'); ?>
 
-		<main>
+		<main class="main">
 
 			<section class="container">
 

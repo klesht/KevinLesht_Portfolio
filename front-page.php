@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<?php include(TEMPLATEPATH . '/parts/splash.php'); ?>
 
-	<main>
+	<main class="main">
 
 		<section id="projects">
 

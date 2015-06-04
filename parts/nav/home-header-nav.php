@@ -5,7 +5,7 @@
 	<ul>
 
 		<li><a href="#projects" class="goto">Projects</a></li>
-		<li><a href="#contact" class="goto">Contact</a></li>
+		<li><a href="javascript:void(0);" class="modal-toggle">Contact</a></li>
 
 		<li><a href="#"><span class="fa fa-codepen"></span></a></li>
 		<li><a href="#"><span class="fa fa-github"></span></a></li>

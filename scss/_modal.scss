@@ -1,0 +1,110 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, 0.8);
+    z-index: 10;
+    overflow-y: auto;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(opacity 0.3s 0, visibility 0 0.3s);
+
+    h6 {
+        text-align:center;
+        text-transform:uppercase;
+        letter-spacing: 2px;
+        font-size:em(30);
+        padding-top:1em;
+        margin:0;
+    }
+
+    &.is-visible {
+        visibility: visible;
+        opacity: 1;
+
+        @include transition(opacity 0.3s 0, visibility 0 0);
+
+        .modal-container {
+            @include transform(translateY(0));
+        }
+    }
+
+    span {
+        cursor: pointer;
+    }
+}
+
+.modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    background: #FFF;
+    margin: 3em auto 4em;
+    cursor: auto;
+    border-radius: 0.25em;
+    @include transform(translateY(-30px));
+    @include transition-property (transform);
+    @include transition-duration(0.3s);
+
+    @include MQ(S) {
+        margin: 4em auto;
+    }
+}
+
+.wpcf7-form {
+    padding: 1.25em;
+    @include clearfix;
+
+    label {
+        font-size:em(14);
+    }
+
+    .wpcf7-text, .wpcf7-textarea {
+        width:100%;
+        font-size:1em;
+        line-height:1em;
+        margin-bottom:1em;
+        outline:0;
+        padding:0.5em;
+        border:1px solid #ddd;
+        color:#333;
+        background-color:#fff;
+        border-radius: 0.25em;
+
+        -webkit-transition: border-color 0.3s;
+        transition: border-color 0.3s;
+    }
+
+    .wpcf7-submit {
+        float: right;
+        padding: 0.8em 1em;
+        margin:1em 0;
+        background: darken(#acb7c0, 10%);
+        color: #fff;
+        border:none;
+        border-radius: 0.25em;
+        @include clearfix;
+
+
+        &:hover {
+          background-color: #acb7c0;
+        }
+    }
+
+    .wpcf7-response-output {
+        margin-top:4em;
+    }
+}
+
+.close-modal {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -40px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #fff;
+}

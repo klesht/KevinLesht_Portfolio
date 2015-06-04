@@ -1,15 +1,28 @@
 <?php
 /**
+ * Template Name: Single Blog Post
  * @package WordPress
  * @subpackage Kevin Lesht
  */
 
-get_header(); ?>
+get_header('blog'); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<main>
 
-		<?php the_content(); ?>
+		<section class="container--small">
 
-	<?php endwhile; endif; ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+				<article id="post-<?php the_ID(); ?>" class="module" role="article">
+					<h1><?php the_title(); ?></h1>
+					<hr>
+
+					<?php the_content(); ?>
+
+				</article>
+
+			<?php endwhile; endif; ?>
+
+		</section>
 
 <?php get_footer(); ?>

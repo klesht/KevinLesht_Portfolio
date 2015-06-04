@@ -5,8 +5,8 @@
 		<div class="page-intro">
 
 			<h6 class="lead-in">The online portfolio of</h6>
-			<h1>Kevin Lesht</h1>
-			<h6 class="tagline">User Experience Designer &amp; Front-End Developer</h6>
+			<h1><?php bloginfo('name'); ?></h1>
+			<h6 class="tagline"><?php bloginfo('description'); ?></h6>
 			<hr>
 
 		</div>

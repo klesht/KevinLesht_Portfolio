@@ -1,13 +1,23 @@
 <?php
 /**
- * Template Name: Projects Archive
+ * Template Name: 404
  * @package WordPress
  * @subpackage Kevin Lesht
  */
 
-get_header(); ?>
+get_header('aux'); ?>
 
-	<?php include(TEMPLATEPATH . '/parts/splash.php'); ?>
+	<section class="splash splash--home">
+
+		<div class="page-intro">
+
+			<h1>404 Error</h1>
+			<h6 class="tagline">Whoops! Unfortunately, the page you&apos;ve requested cannot be found.</h6>
+			<hr>
+
+		</div>
+
+	</section>
 
 	<main class="main">
 
@@ -15,7 +25,7 @@ get_header(); ?>
 		<?php $custom_post_type = 'projects'; $args=array( 'post_type' => $custom_post_type, 'order' => 'ASC' ); ?>
 		<?php $projects_query = new WP_Query($args); if( $projects_query->have_posts() ) { ?>
 
-			<h2 class="section-heading">Projects</h2>
+			<h2 class="section-heading">While you&apos;re here, check out one of my latest projects!</h2>
 
 			<ul class="module more-projects container">
 			<?php while ($projects_query->have_posts()) : $projects_query->the_post(); ?>

@@ -1,15 +1,15 @@
 // Nav effects
 $(document).ready(function($){
 
-	var headerNav = $('.top-navigation'),
+	var headerNav = $('.top-navigation--fixed'),
 		contentSections = $('section');
 
 	$(window).on('scroll', function() {
 
 		if ($(this).scrollTop() >= 550) {
-			$('.top-navigation').addClass('shrink');
+			$('.top-navigation--fixed').addClass('shrink');
 		} else {
-			$('.top-navigation').removeClass('shrink');
+			$('.top-navigation--fixed').removeClass('shrink');
 		}
 
 		updateHeaderNav();
@@ -56,3 +56,37 @@ function scrollBanner() {
 	});
 
 }
+
+$(document).ready(function($) {
+  
+  // modal
+  var $modal = $('.modal'),
+      $modal_nav = $('.modal-toggle');
+
+	// open modal
+  $modal_nav.on('click', function(event) {
+    
+    $modal.addClass('is-visible');
+  
+  });
+
+	// close modal
+	$('.modal').on('click', function(event) {
+    
+    if( $(event.target).is($modal) || $(event.target).is('.close-modal') ) {
+		$modal.removeClass('is-visible');
+    }
+    
+	});
+  
+	// close modal when clicking the esc keyboard button
+  $(document).keyup(function(event) {
+    
+    // ascii code for escape
+    if(event.which=='27') {
+      $modal.removeClass('is-visible');
+    }
+    
+  });
+  
+});

@@ -1,8 +1,4 @@
 .top-navigation {
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 3;
 	width: 100%;
 	height: em(100);
 	background: transparent;
@@ -53,6 +49,7 @@
 				a {
 					position: relative;
 					padding-bottom: 10px;
+					cursor: pointer;
 					@include backface-visibility(hidden);
 					&:after {
 						content: '';
@@ -99,4 +96,11 @@
 			}
 		}
 	} 
+}
+
+.top-navigation--fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 3;
 }
