@@ -34,13 +34,13 @@
 
                 if( $image ) {
 
-                    echo wp_get_attachment_image( $image, $size );
+                    echo wp_get_attachment_image( $image, $size, false, $attr = array( 'class'	=> "animated fadeInDown" ) );
 
                 }
 
             ?>
 
-			<h1 class="project-description"><?php echo get_field('project_description'); ?></h1>
+			<h1 class="project-description animated fadeInUp"><?php echo get_field('project_description'); ?></h1>
 
 		</div>
 
