@@ -1,0 +1,113 @@
+* {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+}
+
+body.login {
+	background: url("../images/home-splash.jpg") no-repeat;
+	background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+}
+
+:focus {
+    outline: 0 !important;
+}
+
+#login {
+    padding: 50px 0 0;
+}
+
+.login {
+
+    h1 a {
+        margin-bottom: 0.75em;
+        background-image: none;
+        background-size: 0 0;
+        width: 100%;
+        height: auto;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.75em;
+        text-indent: 0;
+        text-transform: uppercase;
+        color: #3c3c3c;
+    }
+
+    form {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px;
+        border: 1px solid rgba(0,0,0,.2);
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        background: rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.7);
+        -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.7);
+        box-shadow: 0 0 13px 3px rgba(0,0,0,.7);
+        overflow: hidden;
+
+        input {
+            display: block;
+            width: 240px;
+            height: 48px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        input:focus, textarea:focus {
+            background-color: rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+            -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+            box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+            overflow: hidden;
+        }
+
+        label {
+            line-height: 26px;
+            color: #ececec;
+        }
+
+        p {
+            color: #fff;
+        }
+
+        .forgetmenot {
+            margin: 1em 0 1em !important;
+            
+            #rememberme {
+                height: 18px;
+                width: 18px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+    }
+
+    form .input, input[type="text"] { color: #41b7d8; }
+
+    #nav {
+        padding: 0;
+        text-align: right;
+
+        a {
+            color: #000 !important;
+            &:hover {
+                color: #614d44 !important;
+            }
+        }
+    }
+
+    #backtoblog {
+        display: none;
+    }
+
+}

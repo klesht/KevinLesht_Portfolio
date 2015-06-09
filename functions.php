@@ -171,4 +171,31 @@ function save_url_meta($post_id, $post) {
 }
 add_action('save_post', 'save_url_meta', 1, 2); // save the custom fields
 
+
+// Custom login
+function custom_login() {
+  $files = '<link rel="stylesheet" href="'.get_bloginfo('template_directory').'/scss/login.min.css" />';
+    echo $files;
+}
+add_action('login_head', 'custom_login');
+
+add_filter( 'login_headerurl', 'custom_login_header_url' );
+function custom_login_header_url($url) {
+    return home_url( $path, $scheme );
+}
+
+function kevinlesht_login_logo_url_title() {
+    return $bloginfo = get_bloginfo( $show, $filter );
+} 
+add_filter( 'login_headertitle', 'kevinlesht_login_logo_url_title' );
+
+// removes the WP logo and links from the admin bar
+function annointed_admin_bar_remove() {
+    global $wp_admin_bar;
+
+    /* Remove their stuff */
+    $wp_admin_bar->remove_menu('wp-logo');
+}
+add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
+
 ?>
