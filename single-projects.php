@@ -35,6 +35,10 @@ get_header('projects'); ?>
 
 						<?php get_template_part( 'parts/module', 'media_and_text' ); ?>
 
+					<?php elseif( get_row_layout() == 'browser_and_text_module' ): ?>
+
+						<?php get_template_part( 'parts/module', 'browser_and_text' ); ?>
+
 					<?php elseif( get_row_layout() == 'mobile_and_text_module' ): ?>
 
 						<?php get_template_part( 'parts/module', 'mobile_and_text' ); ?>

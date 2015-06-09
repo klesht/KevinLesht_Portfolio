@@ -11,9 +11,13 @@
 
 	<div>
 
-		<h3><?php the_sub_field('module_title'); ?></h3>
+		<?php if( get_sub_field('module_title') ): ?>
+			
+			<h3><?php the_sub_field('module_title'); ?></h3>
+		
+		<?php endif; ?>
 
-		<p><?php the_sub_field('module_text'); ?></p>
+		<?php the_sub_field('module_text'); ?>
 
 	</div>
 

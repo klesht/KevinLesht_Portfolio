@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blog
+ * The archive template.
  * @package WordPress
  * @subpackage Kevin Lesht
  */
@@ -13,7 +13,10 @@ get_header('aux'); ?>
 
 			<?php if ( have_posts() ) : ?>
 
-				<h1>Blog</h1>
+				<?php
+					the_archive_title( '<h1>', '</h1>' );
+					the_archive_description( '<div class="meta">', '</div>' );
+				?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
