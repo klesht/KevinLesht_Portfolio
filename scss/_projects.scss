@@ -6,7 +6,7 @@
 		margin-bottom: 3em;
 		@include clearfix;
 
-		@include MQ(M) {
+		@include MQ(L) {
 			margin-bottom: 6em;
 			&:nth-child(odd) .project-preview {
 				@include column(.6, right, 0);
@@ -62,7 +62,7 @@
 			height: em(50);
 		}
 
-		@include MQ(M) {
+		@include MQ(L) {
 			@include column(.32);
 			margin: 0 2% 2.8em 0;
 			&:nth-child(3n) {
@@ -84,7 +84,7 @@
 	background: #fff;
 	text-align: center;
 
-	@include MQ(M) {
+	@include MQ(L) {
 		border-radius: 20px;
 	}
 
@@ -115,13 +115,12 @@
 	min-width: 0;
 	padding: 0 1%;
 
-	@include MQ(M) {
+	@include MQ(L) {
 		top: 20%;
 		min-width: 160px;
 		max-width: 220px;
 		padding: 0 10px;
 	}
-
 
 	img {
 		border: 2px solid #8e9394;
@@ -130,6 +129,10 @@
 		height: 26px;
 
 		@include MQ(M) {
+			height: 40px;
+		}
+
+		@include MQ(L) {
 			height: 54px;
 		}
 
@@ -137,23 +140,38 @@
 			top: 8px;
 
 			@include MQ(M) {
+				top: 12px;
+			}
+
+			@include MQ(L) {
 				top: 15px;
 			}
+
 			span {
 				width: 4px;
 				height: 4px;
 				border-radius: 4px;
 
 				@include MQ(M) {
+					width: 6px;
+					height: 6px;
+				}
+
+				@include MQ(L) {
 					width: 8px;
 					height: 8px;	
 				}
+
 			}
 		}
 		.speaker {
 			top: 16px;
 
 			@include MQ(M) {
+				top: 24px;
+			}
+
+			@include MQ(L) {
 				top: 32px;	
 			}
 
@@ -163,6 +181,11 @@
 				border-radius: 2px;
 
 				@include MQ(M) {
+					width: 26px;
+					height: 3px;
+				}
+
+				@include MQ(L) {
 					width: 34px;
 					height: 4px;					
 				}
@@ -174,6 +197,10 @@
 		height: 26px;
 
 		@include MQ(M) {
+			height: 40px;
+		}
+
+		@include MQ(L) {
 			height: 54px;			
 		}
 
@@ -185,6 +212,10 @@
 			top: 4px;
 
 			@include MQ(M) {
+				top: 8px;
+			}
+
+			@include MQ(L) {
 				top: 9px;
 			}
 
@@ -194,6 +225,12 @@
 				border-radius: 8px;
 
 				@include MQ(M) {
+					width: 24px;
+					height: 24px;
+					border-radius: 12px;
+				}
+
+				@include MQ(L) {
 					width: 34px;
 					height: 34px;
 					border-radius: 17px;					
@@ -302,7 +339,7 @@
 .browser--small {
 	margin: 0 auto;
 	max-width: 780px;
-	@include MQ(M) {
+	@include MQ(L) {
 		width: 90%;		
 	}
 

@@ -10,7 +10,7 @@
 
 	<footer class="index-footer">
 
-		<div class="container">
+		<div class="container container--large">
 
 			<nav>
 				<ul>

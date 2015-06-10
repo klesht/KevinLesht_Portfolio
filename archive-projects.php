@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<h2 class="section-heading">Projects</h2>
 
-			<ul class="module more-projects container">
+			<ul class="module more-projects container container--large">
 			<?php while ($projects_query->have_posts()) : $projects_query->the_post(); ?>
 
 				<li>

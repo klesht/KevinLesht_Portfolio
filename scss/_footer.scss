@@ -24,7 +24,7 @@
 			}
 		}
 
-		@include MQ(M) {
+		@include MQ(L) {
 			display: none;
 		}
 	}
@@ -33,7 +33,7 @@
 		display: none;
 		margin: 0;
 
-		@include MQ(M) {
+		@include MQ(L) {
 			display: block;
 		}
 	}

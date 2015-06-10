@@ -37,7 +37,7 @@
 					display: none;
 				}
 
-				@include MQ(M) {
+				@include MQ(L) {
 					&:nth-child(n+3) {
 						display: inline-block;
 					}

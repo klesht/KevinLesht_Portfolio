@@ -9,7 +9,7 @@ get_header('aux'); ?>
 
 	<main role="main">
 
-		<div class="container--small">
+		<div class="container container--small">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

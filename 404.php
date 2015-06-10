@@ -27,7 +27,7 @@ get_header('aux'); ?>
 
 			<h2 class="section-heading">While you&apos;re here, check out one of my latest projects!</h2>
 
-			<ul class="module more-projects container">
+			<ul class="module more-projects container container--large">
 			<?php while ($projects_query->have_posts()) : $projects_query->the_post(); ?>
 
 				<li>

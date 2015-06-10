@@ -1,6 +1,6 @@
 .text {
 
-	@include MQ(M) {
+	@include MQ(L) {
 		@include column-count(2);
 		@include column-gap(1.5em);		
 	}
@@ -15,7 +15,7 @@
 }
 
 .split {
-	@include MQ(M) {
+	@include MQ(L) {
 		> div:first-child {
 			@include column(0.6, left, 5%);
 		}
@@ -28,7 +28,7 @@
 
 .mobile-preview {
 
-	@include MQ(M) {
+	@include MQ(L) {
 		> div:first-child {
 			@include column(0.35, left, 5%);
 		}
@@ -48,7 +48,7 @@
 			max-width: 375px;
 			margin: 0 auto;
 			margin-bottom: 4em;
-			@include MQ(M) {
+			@include MQ(L) {
 				@include column(.48);
 				margin-right: 4%;
 				margin-bottom: 0;
@@ -69,6 +69,10 @@
 		text-transform: uppercase;
 		font-weight: 400;
 		letter-spacing: 1px;
+
+		@include MQ(L) {
+			margin-top: 0;
+		}
 	}
 
 	p {
@@ -80,7 +84,7 @@
 
 .browser-showcase {
 	margin-bottom: 4em;
-	@include MQ(M) {
+	@include MQ(L) {
 		float: left;
 		width: 49%;
 		margin-right: 2%;

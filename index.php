@@ -9,7 +9,7 @@ get_header('aux'); ?>
 
 	<main role="main">
 
-		<div class="container">
+		<div class="container container--large">
 
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

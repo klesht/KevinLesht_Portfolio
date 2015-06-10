@@ -9,7 +9,7 @@
 
 <h2 class="section-heading">Projects</h2>
 
-<ul class="module projects container">
+<ul class="module projects container container--large">
 
 	<?php if(get_field('project_previews_primary_showcase')): ?>
 

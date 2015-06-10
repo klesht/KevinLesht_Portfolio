@@ -11,7 +11,7 @@ get_header('projects'); ?>
 
 		<main class="main">
 
-			<div class="container">
+			<div class="container container--large">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 

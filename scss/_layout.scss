@@ -1,7 +1,7 @@
-$S:     480px;   
-$M:     960px;  
-$L:    1025px;   
-$XL:   1441px;     
+$S:     480px;
+$M:     550px;  
+$L:     960px;   
+$XL:    1025px;
 
 // media queries
 @mixin MQ($canvas) {
@@ -34,14 +34,14 @@ $XL:   1441px;
 
 .container {
 	width: 90%;
-	max-width: 1170px;
 	margin: 0 auto;
 	@include clearfix;
 }
 
+.container--large {
+    max-width: 1170px; 
+}
+
 .container--small {
-    width: 90%;
     max-width: 775px;
-    margin: 0 auto;
-    @include clearfix;
 }

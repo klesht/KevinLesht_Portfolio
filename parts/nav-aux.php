@@ -7,7 +7,7 @@
 
 ?>
 
-<nav class="container" role="navigation">
+<nav class="container container--large" role="navigation">
 
 	<a href="<?php echo site_url(); ?>" class="go-home">Kevin Lesht</a>
 
