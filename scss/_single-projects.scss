@@ -1,16 +1,13 @@
 .text {
-
 	@include MQ(L) {
 		@include column-count(2);
 		@include column-gap(1.5em);		
 	}
+
 	p {
 		font-size: em(20);
 		line-height: em(30);
 		font-weight: 300;
-		&:first-child {
-			margin-top: 0;
-		}
 	}
 }
 
@@ -116,4 +113,8 @@
 
 .inset {
 	padding: 0 2em;
+}
+
+.video-container {
+	text-align: center;
 }

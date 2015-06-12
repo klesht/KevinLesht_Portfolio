@@ -7,7 +7,7 @@
 
 ?>
 
-<h2 class="section-heading">Projects</h2>
+<h2 class="section-heading"><span></span>Projects<span></span></h2>
 
 <ul class="module projects container container--large">
 

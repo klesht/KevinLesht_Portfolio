@@ -37,6 +37,11 @@
 				font-size: em(32);
 				font-weight: 400;
 				margin-top: 1.5em;
+				text-align: center;
+
+				@include MQ(L) {
+					text-align: left;
+				}
 			}
 			p {
 				font-size: em(20);
@@ -289,9 +294,15 @@
 }
 
 .browser {
+	margin: 0 auto;
 	position: relative;
 	border-radius: 6px;
 	border: 2px solid #8e9394;
+
+	@include MQ(L) {
+		margin: 0;
+	}
+
 	img {
 		max-width: 100%;
 		height: auto;
@@ -337,12 +348,10 @@
 }
 
 .browser--small {
-	margin: 0 auto;
 	max-width: 780px;
 	@include MQ(L) {
 		width: 90%;		
 	}
-
 }
 
 .browser--large {

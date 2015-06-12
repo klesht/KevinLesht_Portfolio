@@ -29,7 +29,7 @@
 
 	<?php } if(get_sub_field('asset_type') == "Video") { ?>
 
-		<div>
+		<div class="video-container">
 
 			<?php the_sub_field('video'); ?>
 

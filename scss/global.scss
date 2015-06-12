@@ -27,11 +27,26 @@ img, video {
 }
 
 .section-heading {
-	margin: 0;
-	padding: 2em 0 0;	
+	width: 90%;
+	margin: 0 auto;
+	padding: 2em 0 0;
 	font-size: em(32);
 	text-transform: uppercase;
 	text-align: center;
+	color: $darkGray;
+
+	span {
+		display: none;
+
+		@include MQ(L) {
+			position: relative;
+			display: inline-block;
+			width: 24px;
+			height: 2px;
+			margin: 0 22px 11px;
+			background: $lightGray;			
+		}
+	}
 }
 
 .border {
@@ -41,4 +56,10 @@ img, video {
 .module {
 	margin-top: 4em;
 	@include clearfix;
+
+	p {
+		&:first-child {
+			margin-top: 0;
+		}
+	}
 }

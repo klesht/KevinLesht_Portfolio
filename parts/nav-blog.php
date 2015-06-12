@@ -17,21 +17,21 @@
 
 		<?php if( get_adjacent_post(false, '', true) ) { ?>
 
-		<li><?php previous_post_link('%link', '<span class="fa fa-chevron-left"></span>&nbsp;&nbsp;&nbsp;Last Post'); ?></li>
+		<li><?php previous_post_link('%link', '<span class="fa fa-chevron-left"></span><span class="hidden-device">&nbsp;&nbsp;&nbsp;Last Post</span>'); ?></li>
 		
 		<?php } else { 
 		    $first = new WP_Query('posts_per_page=1&order=DESC'); $first->the_post();
-		    	echo '<li><a href="' . get_permalink() . '"><span class="fa fa-chevron-left"></span>&nbsp;&nbsp;&nbsp;Last Post</a></li>';
+		    	echo '<li><a href="' . get_permalink() . '"><span class="fa fa-chevron-left"></span><span class="hidden-device">&nbsp;&nbsp;&nbsp;Last Post</span></a></li>';
 		  	wp_reset_query();
 		}; ?>
 		    
 		<?php if( get_adjacent_post(false, '', false) ) { ?>
 
-		<li><?php next_post_link('%link', 'Next Post&nbsp;&nbsp;&nbsp;<span class="fa fa-chevron-right"></span>'); ?></li>
+		<li><?php next_post_link('%link', '<span class="hidden-device">Next Post&nbsp;&nbsp;&nbsp;</span><span class="fa fa-chevron-right"></span>'); ?></li>
 		
 		<?php } else { 
 			$last = new WP_Query('posts_per_page=1&order=ASC'); $last->the_post();
-		    	echo '<li><a href="' . get_permalink() . '">Next Post&nbsp;&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></a></li>';
+		    	echo '<li><a href="' . get_permalink() . '"><span class="hidden-device">Next Post&nbsp;&nbsp;&nbsp;</span><span class="fa fa-chevron-right"></span></a></li>';
 		    wp_reset_query();
 		}; ?>
 

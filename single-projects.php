@@ -15,7 +15,7 @@ get_header('projects'); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<h2 class="section-heading">Overview</h2>
+					<h2 class="section-heading"><span></span>Overview<span></span></h2>
 
 					<div class="module text">
 
