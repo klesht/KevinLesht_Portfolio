@@ -1,8 +1,4 @@
-.text {
-	@include MQ(L) {
-		@include column-count(2);
-		@include column-gap(1.5em);		
-	}
+.text, .caption {
 
 	p {
 		font-size: em(16);
@@ -18,6 +14,13 @@
 			font-size: em(20);
 			line-height: em(30);
 		}
+	}
+}
+
+.text {
+	@include MQ(L) {
+		@include column-count(2);
+		@include column-gap(1.5em);		
 	}
 }
 

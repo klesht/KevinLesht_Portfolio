@@ -30,3 +30,13 @@
     ?>
 
 </div>
+
+<?php if( get_sub_field('caption') ): ?>
+
+    <div class="module caption">
+
+        <?php the_sub_field('caption'); ?>
+
+    </div>
+
+<?php endif; ?>
