@@ -5,9 +5,19 @@
 	}
 
 	p {
-		font-size: em(20);
-		line-height: em(30);
+		font-size: em(16);
+		line-height: em(24);
 		font-weight: 300;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@include MQ(M) {
+			font-size: em(20);
+			line-height: em(30);
+		}
 	}
 }
 
@@ -43,12 +53,11 @@
 
 		li {
 			max-width: 375px;
-			margin: 0 auto;
-			margin-bottom: 4em;
+			margin: 2em auto;
+
 			@include MQ(L) {
 				@include column(.48);
-				margin-right: 4%;
-				margin-bottom: 0;
+				margin: 0 4% 0 0;
 				&:last-child {
 					margin-right: 0;
 				}				
@@ -61,11 +70,16 @@
 	@include clearfix;
 
 	h3 {
-		font-size: em(20);
-		line-height: em(29);
+		font-size: em(18);
+		line-height: em(24);
 		text-transform: uppercase;
 		font-weight: 400;
 		letter-spacing: 1px;
+
+		@include MQ(M) {
+			font-size: em(20);
+			line-height: em(29);	
+		}
 
 		@include MQ(L) {
 			margin-top: 0;
@@ -73,19 +87,34 @@
 	}
 
 	p {
-		font-size: em(20);
-		line-height: em(29);
 		font-weight: 300;
+		font-size: em(16);
+		line-height: em(24);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
+		@include MQ(M) {
+			font-size: em(20);
+			line-height: em(29);	
+		}
+
+		@include MQ(L) {
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
 	}
 }
 
 .browser-showcase {
-	margin-bottom: 4em;
+	margin-top: 2em;
 	@include MQ(L) {
 		float: left;
 		width: 49%;
-		margin-right: 2%;
-		margin-bottom: 0;		
+		margin-top: 0;	
+		margin-right: 2%;	
 	}
 
 	&:last-child {
@@ -112,7 +141,9 @@
 }
 
 .inset {
-	padding: 0 2em;
+	@include MQ(L) {
+		padding: 0 2em;
+	}
 }
 
 .video-container {

@@ -20,6 +20,9 @@
     	.splash--project {
     		<?php echo get_field('project_splash'); ?>
     	}
+    	.splash .page-intro .project-description {
+			color: <?php echo get_field('project_description_color'); ?>;
+		}
 	    .teaser {
 	    	<?php echo get_field('next_project_teaser'); ?>
 	    }

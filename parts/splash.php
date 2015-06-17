@@ -9,22 +9,22 @@
 
 <?php if ( is_front_page() || is_post_type_archive('projects') ) { ?>
 
-	<section class="splash splash--home">
+	<div class="splash splash--home">
 
 		<div class="page-intro">
 
-			<h6 class="lead-in">The online portfolio of</h6>
-			<h1><?php bloginfo( 'name' ); ?></h1>
-			<h6 class="tagline"><?php bloginfo( 'description' ); ?></h6>
-			<hr>
+			<h6 class="lead-in animated fadeInUp">The online portfolio of</h6>
+			<h1 class="animated fadeInUp"><?php bloginfo( 'name' ); ?></h1>
+			<h6 class="tagline animated bounceIn"><?php bloginfo( 'description' ); ?></h6>
+			<hr class="animated fadeInUp">
 
 		</div>
 
-	</section>
+	</div>
 
 <?php } else { ?>
 
-	<section class="splash splash--project">
+	<div class="splash splash--project">
 
 		<div class="page-intro">
 
@@ -34,16 +34,16 @@
 
                 if( $image ) {
 
-                    echo wp_get_attachment_image( $image, $size, false, $attr = array( 'class'	=> "animated fadeInDown" ) );
+                    echo wp_get_attachment_image( $image, $size, false, $attr = array( 'class'	=> "animated fadeIn" ) );
 
                 }
 
             ?>
 
-			<h1 class="project-description animated fadeInUp"><?php echo get_field('project_description'); ?></h1>
+			<h1 class="project-description animated fadeIn"><?php echo get_field('project_description'); ?></h1>
 
 		</div>
 
-	</section>
+	</div>
 
 <?php } ?>

@@ -7,11 +7,11 @@
 
 ?>
 
-<h2 class="section-heading"><span></span>More Projects<span></span></h2>
+<?php if(get_field('project_previews_secondary_showcase')): ?>
 
-<ul class="module more-projects container container--large">
+	<h2 class="section-heading"><span></span>More Projects<span></span></h2>
 
-	<?php if(get_field('project_previews_secondary_showcase')): ?>
+	<ul class="module more-projects container container--large">
 
 		<?php while(has_sub_field('project_previews_secondary_showcase')): ?>
 
@@ -47,6 +47,6 @@
 
 		<?php endwhile; ?>
 
-	<?php endif; ?>	
+	</ul>
 
-</ul>
+<?php endif; ?>	

@@ -15,7 +15,7 @@
 
     	<?php echo do_shortcode( '[contact-form-7 id="148" title="Contact form 1"]' ); ?>
 
-    	<span class="close-modal fa fa-close"></span>
+    	<span class="close-modal fa fa-close fa-lg"></span>
 
     </div>
 

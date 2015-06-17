@@ -30,10 +30,14 @@ img, video {
 	width: 90%;
 	margin: 0 auto;
 	padding: 2em 0 0;
-	font-size: em(32);
+	font-size: em(24);
 	text-transform: uppercase;
 	text-align: center;
 	color: $darkGray;
+
+	@include MQ(M) {
+		font-size: em(32);
+	}
 
 	span {
 		display: none;
@@ -54,12 +58,9 @@ img, video {
 }
 
 .module {
-	margin-top: 4em;
+	margin-top: 2em;
 	@include clearfix;
-
-	p {
-		&:first-child {
-			margin-top: 0;
-		}
+	@include MQ(L) {
+		margin-top: 4em;
 	}
 }
