@@ -11,7 +11,7 @@
 
 	<h2 class="post-title"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 
-	<div class="meta">Published <?php the_date(); ?>, by <?php the_author(); ?></div>
+	<div class="meta">Published&nbsp;<?php the_date(); ?>,&nbsp;by&nbsp;<?php the_author(); ?></div>
 
 	<?php the_excerpt(); ?>
 

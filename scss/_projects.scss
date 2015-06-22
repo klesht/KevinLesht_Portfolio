@@ -35,9 +35,10 @@
 		.project-info {
 			h3 {
 				margin-top: 1.5em;
+				font-size: em(24);
 				font-weight: 400;
 				text-align: center;
-				font-size: em(24);
+
 				@include MQ(M) {
 					font-size: em(32);	
 				}
@@ -46,10 +47,11 @@
 				}
 			} 
 			p {
-				font-weight: 300;
 				margin-bottom: 2em;
 				font-size: em(16);
 				line-height: em(24);
+				font-weight: 300;
+
 				@include MQ(M) {
 					font-size: em(20);
 					line-height: em(29);
@@ -68,10 +70,10 @@
 		margin-bottom: 3em;
 
 		h3 {
-			text-align: center;
-			font-size: em(18);
-			font-weight: 400;
 			height: em(50);
+			font-size: em(18);
+			text-align: center;
+			font-weight: 400;
 		}
 
 		@include MQ(L) {
@@ -91,7 +93,7 @@
 
 .mobile {
 	z-index: 1;
-	border: 2px solid #8e9394;
+	border: 2px solid #909597;
 	border-radius: 10px;
 	background: #fff;
 	text-align: center;
@@ -112,7 +114,7 @@
 	span {
 		display: block;
 		margin: 0 auto;
-		background: #8e9394;
+		background: #909597;
 	}
 	.top, .bottom {
 		position: relative;
@@ -135,7 +137,7 @@
 	}
 
 	img {
-		border: 2px solid #8e9394;
+		border: 2px solid #909597;
 	}
 	.top {
 		height: 26px;
@@ -217,7 +219,7 @@
 		}
 
 		span {
-			border: 2px solid #8e9394;
+			border: 2px solid #909597;
 			background: none;
 		}
 		div {
@@ -281,12 +283,12 @@
         position: relative;
         height: 550px;
         overflow-y: scroll;
-        border: 2px solid #8e9394;
+        border: 2px solid #909597;
     }
     .bottom {
         height: 80px;
         span {
-            border: 2px solid #8e9394;
+            border: 2px solid #909597;
             background: none;
         }
         div {
@@ -304,7 +306,7 @@
 	margin: 0 auto;
 	position: relative;
 	border-radius: 6px;
-	border: 2px solid #8e9394;
+	border: 2px solid #909597;
 
 	@include MQ(L) {
 		margin: 0;
@@ -320,7 +322,7 @@
 		width: 100%;
 		height: 40px;
 		border-radius: 5px 5px 0 0;
-		box-shadow: inset 0 -2px #8e9394;
+		box-shadow: inset 0 -2px #909597;
 		background: #fff;
 		ul {
 			position: absolute;
@@ -334,7 +336,7 @@
 				height: 9px;
 				margin-right: 5px;
 				border-radius: 4.5px;
-				background: #8e9394;
+				background: #909597;
 			}
 		}
 		span {
@@ -344,12 +346,13 @@
 			bottom: 8px;
 			left: 66px;
 			padding-left: 8px;
-			box-shadow: inset 0 0 0 2px #8e9394;
+			box-shadow: inset 0 0 0 2px #909597;
 			border-radius: 3px;
 			line-height: 26px;
 			font-size: 12px;
 			text-align: left;
-			color: #8e9394;
+			color: #909597;
+			overflow: hidden;
 		}
 	}
 }

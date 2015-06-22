@@ -32,6 +32,16 @@
 	p {
 		display: none;
 
+		a {
+			text-decoration: none;
+			border-bottom: 0.1em solid rgba(0,0,0,0.1);
+			padding-bottom: 0.1em;
+			color: #238caa;
+			&:hover, &:focus {
+				border-bottom: 0.1em solid #238caa;
+			}
+		}
+
 		@include MQ(L) {
 			display: block;
 			margin: 0;

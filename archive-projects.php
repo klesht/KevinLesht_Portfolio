@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<?php include(TEMPLATEPATH . '/parts/splash.php'); ?>
+	<?php get_template_part( 'parts/splash' ); ?>
 
 	<main class="main" role="main">
 

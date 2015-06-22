@@ -29,6 +29,14 @@
 
 		</header>
 
+	<?php } elseif ( is_single() ) { ?>
+
+		<header class="top-navigation">
+
+			<?php get_template_part( 'parts/nav', 'blog' ); ?>
+
+		</header>	
+
 	<?php } else { ?>
 
 		<header class="top-navigation">

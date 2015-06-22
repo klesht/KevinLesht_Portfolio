@@ -16,7 +16,21 @@
 			<h6 class="lead-in animated fadeInUp">The online portfolio of</h6>
 			<h1 class="animated fadeInUp"><?php bloginfo( 'name' ); ?></h1>
 			<h6 class="tagline animated bounceIn"><?php bloginfo( 'description' ); ?></h6>
-			<hr class="animated fadeInUp">
+			<span class="hr animated fadeInUp"></span>
+
+		</div>
+
+	</div>
+
+<?php } elseif ( is_404() ) { ?>
+
+	<div class="splash splash--home">
+
+		<div class="page-intro">
+
+			<h1>404 Error</h1>
+			<h6 class="tagline">Whoops! Unfortunately, the page you&apos;ve requested cannot be found.</h6>
+			<span class="hr"></span>
 
 		</div>
 

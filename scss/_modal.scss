@@ -13,18 +13,17 @@
     @include transition(opacity 0.3s);
 
     h6 {
+        margin: 0;
+        padding-top: 1em;
+        font-size: em(30);
         text-align: center;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: em(30);
-        padding-top: 1em;
-        margin: 0;
+        letter-spacing: 2px; 
     }
 
     &.is-visible {
         visibility: visible;
         opacity: 1;
-
         @include transition(opacity 0.3s);
 
         .modal-container {
@@ -41,7 +40,7 @@
     position: relative;
     width: 90%;
     max-width: 600px;
-    background: #FFF;
+    background: #fff;
     margin: 3em auto 4em;
     cursor: auto;
     border-radius: 0.25em;
@@ -69,15 +68,15 @@
 
     .wpcf7-text, .wpcf7-textarea {
         width: 100%;
+        background-color: #fff;  
+        margin: 0.5em 0 0.75em;
+        padding: 0.5em;
+        outline: 0;
+        border-radius: 0.25em;
+        border: 1px solid #ddd;
         font-size: 1em;
         line-height: 1em;
-        margin: 0.5em 0 0.75em;
-        outline: 0;
-        padding: 0.5em;
-        border: 1px solid #ddd;
         color: #333;
-        background-color: #fff;
-        border-radius: 0.25em;
         @include transition(border-color 0.3s);
 
         &:focus {
@@ -87,16 +86,16 @@
 
     .wpcf7-submit {
         float: right;
-        padding: 0.8em 1em;
         margin: 1em 0;
+        padding: 0.8em 1em;
         background: darken(#acb7c0, 10%);
-        color: #fff;
-        border: none;
         border-radius: 0.25em;
+        border: none;
+        color: #fff;
         @include clearfix;
 
         &:hover {
-          background-color: #acb7c0;
+            background-color: #acb7c0;
         }
     }
 

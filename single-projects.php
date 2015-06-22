@@ -9,7 +9,7 @@ get_header('projects'); ?>
 
 	<?php get_template_part( 'parts/splash' ); ?>
 
-	<main class="main">
+	<main class="main" role="main">
 
 		<div class="container container--large">
 

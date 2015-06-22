@@ -1,8 +1,5 @@
 * {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    @include transition(all 0.3s ease);
     -webkit-font-smoothing: antialiased;
 }
 
@@ -10,7 +7,6 @@ body.login {
 	background: url("../images/splash_home.jpg") no-repeat;
 	background-size: cover;
     background-position: 50% 50%;
-    background-repeat: none;
 }
 
 :focus {
@@ -89,7 +85,6 @@ body.login {
                 vertical-align: middle;
             }
         }
-
     }
 
     form .input, input[type="text"] { color: #41b7d8; }

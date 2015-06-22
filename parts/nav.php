@@ -9,7 +9,7 @@
 
 <nav class="container container--large" role="navigation">
 
-	<a href="<?php echo site_url(); ?>" class="go-home">Kevin Lesht</a>
+	<a href="<?php echo site_url(); ?>" class="go-home"><?php bloginfo( 'name' ); ?></a>
 
 	<ul>
 

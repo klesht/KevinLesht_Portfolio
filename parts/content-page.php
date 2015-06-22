@@ -7,10 +7,9 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="module">
+<article id="post-<?php the_ID(); ?>" class="module" role="article">
 	<header>
-		<?php the_title( '<h1>', '</h1>' ); ?>
-		<hr>
+		<?php the_title( '<h1 class="hr">', '</h1>' ); ?>
 	</header>
 
 	<?php the_content(); ?>

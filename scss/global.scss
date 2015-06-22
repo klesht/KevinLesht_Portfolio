@@ -1,7 +1,6 @@
 @import "bourbon/bourbon";
 @import "_normalize.scss";
 @import "_animate.scss";
-@import "_variables.scss";
 @import "_layout.scss";
 @import "_buttons.scss";
 @import "_header.scss";
@@ -18,6 +17,7 @@
 
 body {
 	font-family: 'Ubuntu', sans-serif;
+	font-size: 1rem;
 }
 
 img, video {
@@ -33,7 +33,7 @@ img, video {
 	font-size: em(24);
 	text-transform: uppercase;
 	text-align: center;
-	color: $darkGray;
+	color: darken(#909597, 40%);
 
 	@include MQ(M) {
 		font-size: em(32);
@@ -48,13 +48,13 @@ img, video {
 			width: 24px;
 			height: 2px;
 			margin: 0 22px 11px;
-			background: $lightGray;			
+			background: lighten(#909597, 10%);			
 		}
 	}
 }
 
 .border {
-	border: 2px solid #8e9394;	
+	border: 2px solid #909597;	
 }
 
 .module {

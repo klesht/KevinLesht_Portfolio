@@ -5,7 +5,7 @@
  * @subpackage Kevin Lesht
  */
 
-get_header('blog'); ?>
+get_header('aux'); ?>
 
 	<main role="main">
 
