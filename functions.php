@@ -18,7 +18,7 @@ add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) );
 // Load CSS
 function kevinlesht_css() {
 	wp_register_style( 'global', get_template_directory_uri() . '/scss/global.min.css');
-	wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Ubuntu:300,400,500');
+	wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Ubuntu:300,400,500');
 	wp_register_style( 'font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 
 	wp_enqueue_style( 'global' );
