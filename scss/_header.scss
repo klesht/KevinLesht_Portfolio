@@ -6,7 +6,12 @@
 
 	nav {
 		line-height: em(100);
+		font-size: 0.85em;
 		@include transition(all 0.3s ease);
+
+		@include MQ(M) {
+			font-size: 1em;
+		}
 
 		a {
 			text-decoration: none;
